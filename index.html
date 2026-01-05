@@ -3,222 +3,1421 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>City of Multi Services</title>
+  <title>City of Multi Services | Community-First Assistance Platform</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Previous CSS styles remain the same, just adding updated contact section */
-    
-    /* Enhanced Contact Section */
-    .contact-methods {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    /* ====== Modern Professional Design Variables ====== */
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #3b82f6;
+      --secondary: #7c3aed;
+      --accent: #06b6d4;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+      --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
+      
+      --border-radius-sm: 8px;
+      --border-radius-md: 12px;
+      --border-radius-lg: 16px;
+      --border-radius-xl: 24px;
+      --border-radius-full: 9999px;
+      
+      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-    .contact-method {
-      background: white;
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      text-align: center;
-      transition: var(--transition);
+    /* ====== Reset & Base Styles ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     
-    .contact-method:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hover);
+    html {
+      scroll-behavior: smooth;
     }
     
-    .contact-method i {
-      font-size: 2rem;
-      color: var(--primary);
+    body {
+      font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.7;
+      color: var(--gray-800);
+      background-color: white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* ====== Typography ====== */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.5px;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: var(--border-radius-full);
+    }
+    
+    h3 {
+      font-size: 1.75rem;
+      color: var(--gray-800);
       margin-bottom: 1rem;
     }
     
-    .contact-method h4 {
-      margin-bottom: 0.5rem;
+    .eyebrow {
+      font-family: 'Space Grotesk', system-ui;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      display: inline-block;
     }
     
-    .contact-method a {
-      color: var(--dark);
+    .lede {
+      font-size: 1.25rem;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      font-weight: 400;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-header h2 {
+      margin-bottom: 0.75rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--gray-500);
+      max-width: 600px;
+      margin: 0.75rem auto 0;
+    }
+    
+    /* ====== Buttons ====== */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      border-radius: var(--border-radius-md);
+      font-family: 'Space Grotesk', system-ui;
+      font-weight: 600;
+      font-size: 1rem;
       text-decoration: none;
-      transition: var(--transition);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition-base);
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
     }
     
-    .contact-method a:hover {
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: var(--transition-base);
+      z-index: -1;
+    }
+    
+    .button:hover::before {
+      left: 100%;
+    }
+    
+    .button.primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .button.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    }
+    
+    .button.secondary {
+      background: white;
+      color: var(--primary);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .button.secondary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    /* ====== Header & Navigation ====== */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1rem 0;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo-placeholder {
+      width: 180px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary) 25%, var(--secondary) 100%);
+      border-radius: var(--border-radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    
+    .logo-text {
+      font-family: 'Space Grotesk', system-ui;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--dark);
+    }
+    
+    .logo-text span {
       color: var(--primary);
     }
     
-    .phone-number {
-      font-family: 'Space Grotesk', monospace;
-      font-weight: 600;
-      font-size: 1.1rem;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
     }
     
-    /* Business Hours */
-    .business-hours {
-      background: white;
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-700);
+      font-weight: 500;
+      transition: var(--transition-fast);
+      padding: 0.5rem 0;
+      position: relative;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition-base);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* ====== Hero Section ====== */
+    .hero {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 25% 0);
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-copy .logo-placeholder {
+      margin-bottom: 2rem;
+      width: 220px;
+      height: 80px;
+      font-size: 2rem;
+    }
+    
+    .chip-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
       margin-top: 2rem;
     }
     
-    .hours-list {
+    .chip {
+      background: white;
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.875rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-fast);
+    }
+    
+    .chip:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+    
+    .hero-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-xl);
+      border-top: 6px solid var(--secondary);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    }
+    
+    .tag {
+      display: inline-block;
+      background: rgba(124, 58, 237, 0.1);
+      color: var(--secondary);
+      padding: 0.375rem 1rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .mini-list {
       list-style: none;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
     
-    .hours-list li {
+    .mini-list li {
       display: flex;
-      justify-content: space-between;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--light-gray);
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      color: var(--gray-600);
     }
     
-    .hours-list li:last-child {
+    .mini-list li i {
+      color: var(--primary);
+      width: 20px;
+    }
+    
+    /* ====== Legal Disclaimer ====== */
+    .legal-disclaimer {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      padding: 2rem 0;
+      border-top: 1px solid #fbbf24;
+      border-bottom: 1px solid #fbbf24;
+    }
+    
+    .disclaimer-content {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid #f59e0b;
+    }
+    
+    .disclaimer-content h4 {
+      color: #92400e;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .disclaimer-content h4 i {
+      color: #f59e0b;
+    }
+    
+    .disclaimer-text {
+      color: var(--gray-700);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    
+    .language-toggle {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .language-toggle button {
+      padding: 0.5rem 1.5rem;
+      border: none;
+      background: var(--gray-200);
+      color: var(--gray-600);
+      border-radius: var(--border-radius-md);
+      font-family: 'Space Grotesk', system-ui;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    
+    .language-toggle button.active {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .disclaimer-spanish {
+      display: none;
+    }
+    
+    /* ====== Why Matters Section ====== */
+    .why-matters {
+      padding: 6rem 0;
+      background: white;
+    }
+    
+    .matters-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .matters-lead {
+      font-size: 1.25rem;
+      color: var(--gray-700);
+      margin-bottom: 4rem;
+      line-height: 1.8;
+    }
+    
+    .matters-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    
+    .stat {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+    }
+    
+    .stat:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-light);
+    }
+    
+    .stat-number {
+      font-family: 'Space Grotesk', system-ui;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+    /* ====== Services Section ====== */
+    .services {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    
+    .service-card {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-base);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      transition: var(--transition-base);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-light);
+    }
+    
+    .service-card:hover::before {
+      height: 100%;
+    }
+    
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      border-radius: var(--border-radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', system-ui;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .service-card:nth-child(2) .service-icon {
+      background: linear-gradient(135deg, var(--secondary) 0%, #8b5cf6 100%);
+    }
+    
+    .service-card:nth-child(3) .service-icon {
+      background: linear-gradient(135deg, var(--accent) 0%, #22d3ee 100%);
+    }
+    
+    .service-card:nth-child(4) .service-icon {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    }
+    
+    .service-card:nth-child(5) .service-icon {
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    }
+    
+    .service-card:nth-child(6) .service-icon {
+      background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    }
+    
+    /* ====== Financial Services Section ====== */
+    .financial-services {
+      padding: 6rem 0;
+      background: white;
+      position: relative;
+    }
+    
+    .financial-services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gray-300), transparent);
+    }
+    
+    .services-bilingual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1000px;
+      margin: 3rem auto 0;
+    }
+    
+    .english-services, .spanish-services {
+      background: white;
+      padding: 2.5rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+    }
+    
+    .english-services:hover, .spanish-services:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .english-services {
+      border-top: 6px solid var(--primary);
+    }
+    
+    .spanish-services {
+      border-top: 6px solid #10b981;
+    }
+    
+    .english-services h3, .spanish-services h3 {
+      color: var(--gray-800);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+    }
+    
+    .english-services h3 {
+      color: var(--primary-dark);
+    }
+    
+    .spanish-services h3 {
+      color: #047857;
+    }
+    
+    .service-list {
+      list-style: none;
+    }
+    
+    .service-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-700);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: var(--transition-fast);
+    }
+    
+    .service-list li:last-child {
       border-bottom: none;
     }
     
-    .hours-list .day {
-      font-weight: 500;
+    .service-list li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: bold;
+      flex-shrink: 0;
     }
     
-    .hours-list .time {
-      color: var(--gray);
+    .english-services .service-list li::before {
+      color: var(--primary);
+    }
+    
+    .spanish-services .service-list li::before {
+      color: #10b981;
+    }
+    
+    .service-list li:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+    
+    /* ====== Platform Modules ====== */
+    .modules {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .module-card {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-base);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .module-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-light);
+    }
+    
+    .module-header {
+      margin-bottom: 1.5rem;
+    }
+    
+    .module-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      padding: 0.375rem 1rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+    
+    /* ====== Contact Section ====== */
+    .contact-top {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .contact-invite {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .contact-invite h2 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-invite h2::after {
+      background: white;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .contact-invite p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .contact-methods-inline {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+    
+    .contact-item-inline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-width: 220px;
+    }
+    
+    .contact-item-inline i {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-base);
+    }
+    
+    .contact-item-inline:hover i {
+      transform: scale(1.1) rotate(5deg);
+      background: rgba(255, 255, 255, 0.25);
+    }
+    
+    .contact-item-inline h4 {
+      color: white;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    .contact-item-inline a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--border-radius-md);
+      background: rgba(255, 255, 255, 0.1);
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    
+    .contact-item-inline a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .phone-badge {
+      background: var(--accent);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+      font-weight: 600;
+    }
+    
+    /* ====== Footer ====== */
+    .footer {
+      background: var(--gray-900);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-logo {
+      width: 200px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      border-radius: var(--border-radius-md);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+    
+    .footer-brand p {
+      color: var(--gray-400);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .contact-details {
+      margin: 1.5rem 0;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      color: var(--gray-400);
+    }
+    
+    .contact-item a {
+      color: var(--gray-400);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    .contact-item a:hover {
+      color: white;
+    }
+    
+    .contact-item i {
+      color: var(--primary-light);
+      width: 20px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      transition: var(--transition-base);
+    }
+    
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .footer-links h4 {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+    
+    .footer-links ul {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: var(--gray-400);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+    
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 0.875rem;
+    }
+    
+    /* ====== Responsive Design ====== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .services-bilingual {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .contact-methods-inline {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .services-grid,
+      .modules-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero, .why-matters, .services, .financial-services, .modules, .contact-top {
+        padding: 4rem 0;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.75rem;
+      }
+      
+      .lede {
+        font-size: 1.125rem;
+      }
+      
+      .hero-card, .service-card, .module-card, .english-services, .spanish-services {
+        padding: 2rem 1.5rem;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+    }
+    
+    /* ====== Animations ====== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+    
+    .delay-3 {
+      animation-delay: 0.6s;
     }
   </style>
 </head>
 <body>
-
-  <!-- All previous sections remain the same until Contact Section -->
-
-  <!-- Updated Contact Section with your details -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2>Contact Us</h2>
-        <p class="section-subtitle">Get in touch with our team</p>
+  <!-- Header with Navigation -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <div class="logo-container">
+        <!-- Replace with your actual logo -->
+        <div class="logo-placeholder">CITY OF MULTI SERVICES</div>
+        <div class="logo-text">City of <span>Multi Services</span></div>
       </div>
       
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h2>We're here to help</h2>
-          <p>Reach out to us for inquiries, support, or partnership opportunities. Our team is ready to assist you with any questions about our services.</p>
-          
-          <div class="contact-methods">
-            <div class="contact-method">
-              <i class="fas fa-envelope"></i>
-              <h4>Email</h4>
-              <a href="mailto:cityofmultiservices@gmail.com">cityofmultiservices@gmail.com</a>
-              <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">General inquiries & support</p>
-            </div>
-            
-            <div class="contact-method">
-              <i class="fas fa-phone-alt"></i>
-              <h4>Direct Line</h4>
-              <div class="phone-number">(702) 438-4747</div>
-              <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">Monday-Friday, 9AM-5PM PST</p>
-            </div>
-            
-            <div class="contact-method">
-              <i class="fas fa-building"></i>
-              <h4>Office Information</h4>
-              <div>For official business inquiries</div>
-              <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">info@citymultiservices.org</p>
-            </div>
-          </div>
-          
-          <div class="business-hours">
-            <h4><i class="far fa-clock"></i> Business Hours</h4>
-            <ul class="hours-list">
-              <li>
-                <span class="day">Monday - Thursday</span>
-                <span class="time">9:00 AM - 6:00 PM</span>
-              </li>
-              <li>
-                <span class="day">Friday</span>
-                <span class="time">9:00 AM - 5:00 PM</span>
-              </li>
-              <li>
-                <span class="day">Saturday</span>
-                <span class="time">10:00 AM - 2:00 PM</span>
-              </li>
-              <li>
-                <span class="day">Sunday</span>
-                <span class="time">Closed</span>
-              </li>
-            </ul>
-          </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#financial">Financial</a>
+        <a href="#modules">Modules</a>
+        <a href="#contact">Contact</a>
+        <a href="#" class="button secondary">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="logo-placeholder">CITY OF MULTI SERVICES</div>
+        <p class="eyebrow">Community-first AI Platform</p>
+        <h1>City of Multi Services</h1>
+        <p class="lede">
+          An AI-assisted platform to help underrepresented and multilingual communities navigate essential services with clarity and confidence.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href="#services">
+            <i class="fas fa-rocket"></i>
+            Explore Services
+          </a>
+          <a class="button secondary" href="#contact">
+            <i class="fas fa-comments"></i>
+            Get In Touch
+          </a>
+        </div>
+        <div class="chip-row">
+          <span class="chip"><i class="fas fa-language"></i> Multilingual Guidance</span>
+          <span class="chip"><i class="fas fa-shield-alt"></i> Ethical AI</span>
+          <span class="chip"><i class="fas fa-users"></i> Community-First</span>
+          <span class="chip"><i class="fas fa-lock"></i> Privacy-Focused</span>
+        </div>
+      </div>
+      <div class="hero-card fade-in delay-1">
+        <div class="tag">Our Mission</div>
+        <h3>Close the gap between people and complex systems.</h3>
+        <p>
+          We combine clear design, trusted resources, and responsible AI so anyone can access legal, educational, and digital help without feeling lost.
+        </p>
+        <ul class="mini-list">
+          <li><i class="fas fa-comment-alt"></i> Plain-language guidance</li>
+          <li><i class="fas fa-language"></i> English, Spanish, and 8+ languages</li>
+          <li><i class="fas fa-shield-alt"></i> Privacy-respecting support</li>
+          <li><i class="fas fa-clock"></i> 24/7 AI assistance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Disclaimer Section -->
+  <section class="legal-disclaimer fade-in">
+    <div class="container">
+      <div class="disclaimer-content">
+        <div id="english-disclaimer">
+          <h4><i class="fas fa-exclamation-triangle"></i> IMPORTANT LEGAL NOTICE</h4>
+          <p class="disclaimer-text">
+            <strong>Disclaimer:</strong> I am not an attorney or accredited representative in the State of Nevada, and I am not authorized to provide legal advice or legal representation to any person. The information provided on this platform is for general informational purposes only and should not be construed as legal advice. For specific legal matters, please consult with a licensed attorney in your jurisdiction.
+          </p>
+          <p class="disclaimer-text">
+            This platform provides guidance and resources but does not establish an attorney-client relationship. We connect users with legal resources and provide document preparation assistance, but we do not practice law or provide legal representation.
+          </p>
         </div>
         
-        <div class="contact-form">
-          <h3>Send us a message</h3>
-          <p style="color: var(--gray); margin-bottom: 1.5rem;">We typically respond within 24 hours.</p>
-          
-          <form id="contactForm">
-            <div class="form-group">
-              <input type="text" placeholder="Your full name" required>
-            </div>
-            
-            <div class="form-group">
-              <input type="email" placeholder="Email address" required>
-            </div>
-            
-            <div class="form-group">
-              <select required style="width: 100%; padding: 1rem; border: 1px solid var(--light-gray); border-radius: var(--border-radius); font-family: 'Work Sans', sans-serif; font-size: 1rem;">
-                <option value="">Select inquiry type</option>
-                <option value="general">General Information</option>
-                <option value="service">Service Inquiry</option>
-                <option value="partnership">Partnership Opportunity</option>
-                <option value="support">Technical Support</option>
-                <option value="feedback">Feedback</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <textarea placeholder="Your message..." rows="5" required></textarea>
-            </div>
-            
-            <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
-              <input type="checkbox" id="newsletter" style="width: auto;">
-              <label for="newsletter" style="font-size: 0.9rem;">Subscribe to our newsletter for updates</label>
-            </div>
-            
-            <button type="submit" class="button primary">
-              <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
-              Send Message
-            </button>
-          </form>
+        <div id="spanish-disclaimer" class="disclaimer-spanish">
+          <h4><i class="fas fa-exclamation-triangle"></i> AVISO LEGAL IMPORTANTE</h4>
+          <p class="disclaimer-text">
+            <strong>Descargo de responsabilidad:</strong> No soy un abogado ni representante acreditado en el Estado de Nevada, y no estoy autorizado para proporcionar asesoramiento legal o representación legal a ninguna persona. La información proporcionada en esta plataforma es solo para fines informativos generales y no debe interpretarse como asesoramiento legal. Para asuntos legales específicos, consulte con un abogado licenciado en su jurisdicción.
+          </p>
+          <p class="disclaimer-text">
+            Esta plataforma proporciona orientación y recursos pero no establece una relación abogado-cliente. Conectamos a los usuarios con recursos legales y brindamos asistencia en la preparación de documentos, pero no practicamos la ley ni proporcionamos representación legal.
+          </p>
+        </div>
+        
+        <div class="language-toggle">
+          <button id="english-btn" class="active" onclick="toggleDisclaimer('english')">
+            <i class="fas fa-flag-usa"></i> English
+          </button>
+          <button id="spanish-btn" onclick="toggleDisclaimer('spanish')">
+            <i class="fas fa-flag"></i> Español
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Updated Footer with Contact Info -->
+  <!-- Why It Matters Section -->
+  <section class="why-matters fade-in">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Our Impact</p>
+        <h2>Why This Matters</h2>
+        <p class="section-subtitle">Reducing barriers to essential services</p>
+      </div>
+      <div class="matters-content">
+        <p class="matters-lead">
+          City of Multi Services brings document prep, translation, digital literacy, and resource navigation together in one easy place. Everything is guided by ethical AI and community feedback.
+        </p>
+        <div class="matters-stats">
+          <div class="stat fade-in delay-1">
+            <div class="stat-number">1,250+</div>
+            <div class="stat-label">Users Helped</div>
+          </div>
+          <div class="stat fade-in delay-2">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Languages Supported</div>
+          </div>
+          <div class="stat fade-in delay-1">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">AI Assistance</div>
+          </div>
+          <div class="stat fade-in delay-2">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Ethical AI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section class="services fade-in" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">What We Offer</p>
+        <h2>Core Services</h2>
+        <p class="section-subtitle">What you can do here</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">DP</div>
+          <h3>Document Preparation</h3>
+          <p>Immigration packets, taxes, resumes, and applications with step-by-step checklists and AI verification.</p>
+        </div>
+        <div class="service-card fade-in delay-1">
+          <div class="service-icon">AI</div>
+          <h3>AI Translation</h3>
+          <p>English, Spanish, and other languages with context-aware explanations and cultural sensitivity.</p>
+        </div>
+        <div class="service-card fade-in delay-2">
+          <div class="service-icon">DL</div>
+          <h3>Digital Literacy</h3>
+          <p>Workshops and one-on-one tech help so users can navigate online systems safely and confidently.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">LA</div>
+          <h3>Legal Aid Links</h3>
+          <p>Connections to trusted legal resources, clinics, and community partners with verified credentials.</p>
+        </div>
+        <div class="service-card fade-in delay-1">
+          <div class="service-icon">MW</div>
+          <h3>Mental Wellness</h3>
+          <p>Guided pathways to hotlines, support groups, and vetted local mental health services.</p>
+        </div>
+        <div class="service-card fade-in delay-2">
+          <div class="service-icon">TS</div>
+          <h3>Tech Support</h3>
+          <p>Quick help for devices, accounts, and access so users stay connected and productive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Services Section -->
+  <section class="financial-services fade-in" id="financial">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Bilingual Financial Solutions</p>
+        <h2>FINANCIAL PLANNING</h2>
+        <p class="section-subtitle">Personal & Business</p>
+      </div>
+      
+      <div class="services-bilingual">
+        <div class="english-services fade-in">
+          <h3><i class="fas fa-flag-usa"></i> OUR SERVICES</h3>
+          <ul class="service-list">
+            <li>Financial Planning</li>
+            <li>Saving for College</li>
+            <li>Life Insurance, Disability Insurance, and Long Term Care</li>
+            <li>Retirement Planning</li>
+            <li>Tax Strategies</li>
+            <li>Investments & Wealth Management</li>
+          </ul>
+        </div>
+        
+        <div class="spanish-services fade-in delay-1">
+          <h3><i class="fas fa-language"></i> NUESTROS SERVICIOS</h3>
+          <ul class="service-list">
+            <li>Planificación Financiera</li>
+            <li>Ahorros para la educación</li>
+            <li>Seguros de vida, discapacidad, cuidado a largo plazo</li>
+            <li>Planes de Retiro</li>
+            <li>Estrategias para reducir impuestos</li>
+            <li>Administración de patrimonios y cuentas de inversiones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Modules Section -->
+  <section class="modules fade-in" id="modules">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">How It Works</p>
+        <h2>Platform Modules</h2>
+        <p class="section-subtitle">Built as a flexible, ethical stack</p>
+      </div>
+      <div class="modules-grid">
+        <div class="module-card fade-in">
+          <div class="module-header">
+            <div class="module-tag">Guides</div>
+            <h3>Document Prep</h3>
+          </div>
+          <p>Structured flows with guardrails to avoid missing forms or deadlines. AI-powered verification ensures completeness.</p>
+        </div>
+        <div class="module-card fade-in delay-1">
+          <div class="module-header">
+            <div class="module-tag">Language</div>
+            <h3>Translation & Interpretation</h3>
+          </div>
+          <p>In-line translations plus context notes so meaning stays accurate across languages and cultures.</p>
+        </div>
+        <div class="module-card fade-in delay-2">
+          <div class="module-header">
+            <div class="module-tag">Support</div>
+            <h3>Digital Literacy</h3>
+          </div>
+          <p>Short lessons and guided practice tailored to the user's comfort level, with 24/7 AI assistance.</p>
+        </div>
+        <div class="module-card fade-in">
+          <div class="module-header">
+            <div class="module-tag">Justice</div>
+            <h3>Legal Aid & Resources</h3>
+          </div>
+          <p>Routing to reputable partners with transparent disclaimers and clear consent processes.</p>
+        </div>
+        <div class="module-card fade-in delay-1">
+          <div class="module-header">
+            <div class="module-tag">Care</div>
+            <h3>Mental Wellness Navigator</h3>
+          </div>
+          <p>Resource matching that respects privacy and urgency, with culturally sensitive support pathways.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-top fade-in" id="contact">
+    <div class="container">
+      <div class="contact-invite">
+        <h2>Join Our Community</h2>
+        <p>We're looking for community partners, volunteers, and feedback to make City of Multi Services better for everyone.</p>
+        
+        <div class="contact-methods-inline">
+          <!-- Email Contact -->
+          <div class="contact-item-inline fade-in">
+            <i class="fas fa-envelope"></i>
+            <h4>Email Us</h4>
+            <a href="mailto:hello@citymultiservices.org">
+              hello@citymultiservices.org
+            </a>
+            <small style="opacity: 0.8; margin-top: 0.25rem;">General inquiries & partnerships</small>
+          </div>
+          
+          <!-- Mobile Phone Contact -->
+          <div class="contact-item-inline fade-in delay-1">
+            <i class="fas fa-mobile-alt"></i>
+            <h4>Call or Text</h4>
+            <a href="tel:7029273985">
+              (702) 927-3985
+              <span class="phone-badge">Mobile</span>
+            </a>
+            <small style="opacity: 0.8; margin-top: 0.25rem;">Available for calls & texts</small>
+          </div>
+          
+          <!-- Location Info -->
+          <div class="contact-item-inline fade-in delay-2">
+            <i class="fas fa-globe-americas"></i>
+            <h4>Our Reach</h4>
+            <div style="font-weight: 500; margin-top: 0.5rem;">Community-first, available everywhere</div>
+            <small style="opacity: 0.8; margin-top: 0.25rem;">Serving all communities</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="logo.png" alt="City of Multi Services Logo" class="footer-logo">
-          <p>Helping communities navigate essential services with clarity and confidence.</p>
+          <div class="footer-logo">CITY OF MULTI SERVICES</div>
+          <p>Helping communities navigate essential services with clarity and confidence through ethical AI and human-centered design.</p>
           
-          <div class="contact-details" style="margin: 1.5rem 0;">
+          <div class="contact-details">
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <span>cityofmultiservices@gmail.com</span>
+              <a href="mailto:hello@citymultiservices.org">
+                hello@citymultiservices.org
+              </a>
             </div>
             <div class="contact-item">
-              <i class="fas fa-phone-alt"></i>
-              <span>(702) 438-4747</span>
+              <i class="fas fa-mobile-alt"></i>
+              <a href="tel:7029273985">
+                (702) 927-3985 <span style="font-size: 0.8rem; background: rgba(255, 255, 255, 0.2); padding: 0.1rem 0.4rem; border-radius: 10px; margin-left: 0.5rem;">Mobile</span>
+              </a>
             </div>
             <div class="contact-item">
-              <i class="fas fa-building"></i>
-              <span>info@citymultiservices.org</span>
+              <i class="fas fa-globe-americas"></i>
+              <span>Community-first, available everywhere</span>
             </div>
           </div>
           
@@ -227,6 +1426,7 @@
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         
@@ -234,8 +1434,8 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="#services">Our Services</a></li>
-            <li><a href="#mission">Our Mission</a></li>
-            <li><a href="#status">Project Status</a></li>
+            <li><a href="#financial">Financial Planning</a></li>
+            <li><a href="#modules">Platform Modules</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
@@ -243,20 +1443,20 @@
         <div class="footer-links">
           <h4>Resources</h4>
           <ul>
+            <li><a href="#legal">Legal Disclaimer</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Accessibility Statement</a></li>
-            <li><a href="#">Multilingual Support</a></li>
+            <li><a href="#">Accessibility</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h4>Services</h4>
+          <h4>Languages</h4>
           <ul>
-            <li><a href="#services">Document Preparation</a></li>
-            <li><a href="#services">AI Translation</a></li>
-            <li><a href="#services">Digital Literacy</a></li>
-            <li><a href="#services">Legal Aid Links</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">中文</a></li>
+            <li><a href="#">Français</a></li>
           </ul>
         </div>
       </div>
@@ -264,53 +1464,90 @@
       <div class="footer-bottom">
         <p>&copy; 2023 City of Multi Services. All rights reserved. Built with ethical AI and community care.</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">
-          Email: cityofmultiservices@gmail.com | Phone: (702) 438-4747 | Office: info@citymultiservices.org
+          Email: hello@citymultiservices.org | Mobile: (702) 927-3985 | Community-first, available everywhere
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4);">
+          Not an attorney or accredited representative in Nevada. Does not provide legal advice or representation.
         </p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Form submission handler
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+    // Legal Disclaimer Language Toggle
+    function toggleDisclaimer(language) {
+      const englishDisclaimer = document.getElementById('english-disclaimer');
+      const spanishDisclaimer = document.getElementById('spanish-disclaimer');
+      const englishBtn = document.getElementById('english-btn');
+      const spanishBtn = document.getElementById('spanish-btn');
       
-      // Get form data
-      const formData = {
-        name: this.querySelector('input[type="text"]').value,
-        email: this.querySelector('input[type="email"]').value,
-        inquiryType: this.querySelector('select').value,
-        message: this.querySelector('textarea').value,
-        newsletter: this.querySelector('#newsletter').checked
-      };
-      
-      // In a real application, you would send this data to a server
-      // For demo purposes, we'll show a success message
-      alert('Thank you for your message! We will get back to you within 24 hours.\n\nA copy has been sent to cityofmultiservices@gmail.com');
-      
-      // Reset form
-      this.reset();
+      if (language === 'english') {
+        englishDisclaimer.style.display = 'block';
+        spanishDisclaimer.style.display = 'none';
+        englishBtn.classList.add('active');
+        spanishBtn.classList.remove('active');
+      } else {
+        englishDisclaimer.style.display = 'none';
+        spanishDisclaimer.style.display = 'block';
+        englishBtn.classList.remove('active');
+        spanishBtn.classList.add('active');
+      }
+    }
+    
+    // Smooth Scrolling for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
     });
     
     // Phone number click handler
-    document.querySelectorAll('.phone-number, .contact-item').forEach(element => {
-      if (element.textContent.includes('702')) {
-        element.addEventListener('click', function() {
-          if (confirm('Call (702) 438-4747?')) {
-            window.location.href = 'tel:+17024384747';
-          }
-        });
-        element.style.cursor = 'pointer';
-      }
+    document.querySelectorAll('a[href^="tel"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Optional: Add analytics tracking here
+        console.log('Phone number clicked:', this.href);
+      });
     });
     
-    // Email click handler
+    // Email link handler
     document.querySelectorAll('a[href^="mailto"]').forEach(link => {
       link.addEventListener('click', function(e) {
-        // Optional: Track email clicks
+        // Optional: Add analytics tracking here
         console.log('Email link clicked:', this.href);
       });
     });
+    
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all sections for animation
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+    
+    // Initialize with English disclaimer
+    toggleDisclaimer('english');
   </script>
 </body>
 </html>
