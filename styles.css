@@ -46,6 +46,27 @@ p {
   padding: 0 0 0.5rem;
 }
 
+<section class="disclaimer-section">
+    <div class="container">
+        <h2>Before You Start</h2>
+        <p><strong>This platform is brought to you by City of Multi Services.</strong> You will find AI-assisted guidance and resources to help you navigate essential services for yourself. The information below will help you understand what this platform can do.</p>
+
+        <!-- Your Bilingual Legal Disclaimer -->
+        <div class="legal-notice">
+            <h3><i class="fas fa-exclamation-triangle"></i> Important Legal Notice / Aviso Legal Importante</h3>
+            <p><strong>English:</strong> I am not an attorney or accredited representative in the State of Nevada, and I am not authorized to provide legal advice or legal representation to any person...</p>
+            <p><strong>Español:</strong> No soy un abogado ni representante acreditado en el Estado de Nevada, y no estoy autorizado para proporcionar asesoramiento legal...</p>
+        </div>
+
+        <h3>What This Platform Offers</h3>
+        <ul>
+            <li>AI-powered guidance for forms and applications.</li>
+            <li>Multilingual translation and explanations.</li>
+            <li>Connections to trusted community resources and partners.</li>
+            <li>Educational guides on digital literacy and processes.</li>
+        </ul>
+    </div>
+</section>
 .hero {
   background:
     radial-gradient(circle at 20% 15%, rgba(14, 168, 155, 0.18), transparent 36%),
