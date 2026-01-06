@@ -505,6 +505,13 @@ h1 {
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
+.service-photo {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
