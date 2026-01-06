@@ -1,301 +1,514 @@
-HTML DOCUMENT START
-  HEAD SECTION:
-    - Meta charset, viewport
-    - Title: "City of Multi Services | Community-First Assistance Platform"
-    - Google Fonts: Space Grotesk, Work Sans
-    - Font Awesome CDN
-    - styles.css link
-  
-  BODY START
-  
-  <!-- HEADER WITH NAVIGATION -->
-  HEADER (class: main-header)
-    DIV container
-      DIV logo-container
-        DIV logo-placeholder: "CITY OF MULTI SERVICES"
-        DIV logo-text: "City of " SPAN "Multi Services"
-      NAV nav-links
-        A href="#before-you-start": "Before You Start"
-        A href="#mission-who-we-are": "Our Mission"
-        A href="#services": "Our Services"
-        A href="#financial": "Financial Planning"
-        A href="#contact": "Contact"
-        BUTTON secondary: "Get Started"
-  
-  <!-- HERO SECTION -->
-  SECTION (class: hero)
-    DIV container
-      DIV hero-grid
-        DIV hero-copy
-          DIV logo-placeholder: "CITY OF MULTI SERVICES"
-          P eyebrow: "Community-first AI Platform"
-          H1: "City of Multi Services"
-          P lede: "An AI-assisted platform to help underrepresented and multilingual communities..."
-          DIV cta-row
-            BUTTON primary with rocket icon: "Explore Services"
-            BUTTON secondary with comments icon: "Get In Touch"
-          DIV chip-row
-            SPAN chip with language icon: "Multilingual Guidance"
-            SPAN chip with shield icon: "Ethical AI"
-            SPAN chip with users icon: "Community-First"
-            SPAN chip with lock icon: "Privacy-Focused"
-        
-        DIV hero-card
-          DIV tag: "Our Mission"
-          H3: "Close the gap between people and complex systems."
-          P: "We combine clear design, trusted resources, and responsible AI..."
-          UL mini-list
-            LI with comment icon: "Plain-language guidance"
-            LI with language icon: "English, Spanish, and 8+ languages"
-            LI with shield icon: "Privacy-respecting support"
-            LI with clock icon: "24/7 AI assistance"
-  
-  <!-- BEFORE YOU START (LEGAL DISCLAIMER) -->
-  SECTION (id: before-you-start, class: disclaimer-section)
-    DIV container
-      H2: "Before You Start"
-      P: "This platform is brought to you by City of Multi Services..."
-      
-      DIV legal-notice
-        H3 with warning icon: "Important Legal Notice / Aviso Legal Importante"
-        P strong "English:": "I am not an attorney or accredited representative in the State of Nevada..."
-        P strong "Español:": "No soy un abogado ni representante acreditado en el Estado de Nevada..."
-      
-      H3: "What This Platform Offers"
-      UL
-        LI: "AI-powered guidance for forms and applications."
-        LI: "Multilingual translation and explanations."
-        LI: "Connections to trusted community resources and partners."
-        LI: "Educational guides on digital literacy and processes."
-  
-  <!-- OUR MISSION & WHO WE ARE (NEW SECTION WITH YOUR CONTENT) -->
-  SECTION (id: mission-who-we-are, class: mission-section)
-    DIV container
-      DIV section-header
-        P eyebrow: "Our Story"
-        H2: "Our Mission & Who We Are"
-        P section-subtitle: "Building bridges between communities and essential services"
-      
-      DIV mission-grid
-        <!-- HISTORY CARD -->
-        DIV mission-card
-          DIV mission-icon with history icon
-          H3: "Our History & Background"
-          DIV placeholder-info
-            P: "City of Tax and Multiservices was created in 2014 by working women, honest and professional people who understand the needs of immigrant families to obtain the best advice on tax matters, immigration, Notary Public services, document translation services, help in home buying processes, financial planning or how to start a business."
-            P: "The members of City of Tax and Multiservices have more than 15 years of experience in these areas. They are enthusiastic people, delighted to serve the community, informing and preparing families so they are not abused for not knowing the language, for not having information about the procedure they are going to carry out, trying to educate families so they know their rights and fulfill their tax, legal obligations, etc."
-            P: "We are pleased to help without discriminating against race, religion, sex or color with our experience and knowledge in these areas, contributing to improving Hispanic communities."
-        
-        <!-- MISSION CARD -->
-        DIV mission-card
-          DIV mission-icon with bullseye icon
-          H3: "Our Mission"
-          DIV placeholder-info
-            P: "City of Tax and Multiservices is pleased to advise, instruct and explain in your language in Immigration, Legal, Tax, Translation services, or in any procedure that you do not have knowledge of. We guide you step by step, taking you by the hand until you obtain the expected response."
-        
-        <!-- VISION CARD -->
-        DIV mission-card
-          DIV mission-icon with eye icon
-          H3: "Our Vision"
-          DIV placeholder-info
-            P: "We are focused so that residents have access to information in a transparent, private, honest and comprehensive way, preventing them from being victims of fraud for not speaking the language, for not understanding the process, for not having knowledge of the laws applicable to their cases, helping to expand their options to invest in their future and maximize their resources."
-  
-  <!-- WHY IT MATTERS SECTION -->
-  SECTION (class: why-matters)
-    DIV container
-      DIV section-header
-        P eyebrow: "Our Impact"
-        H2: "Why This Matters"
-        P section-subtitle: "Reducing barriers to essential services"
-      
-      DIV matters-content
-        P matters-lead: "City of Multi Services brings document prep, translation, digital literacy..."
-        
-        DIV matters-stats
-          DIV stat
-            DIV stat-number: "1,250+"
-            DIV stat-label: "Users Helped"
-          DIV stat
-            DIV stat-number: "8"
-            DIV stat-label: "Languages Supported"
-          DIV stat
-            DIV stat-number: "24/7"
-            DIV stat-label: "AI Assistance"
-          DIV stat
-            DIV stat-number: "100%"
-            DIV stat-label: "Ethical AI"
-  
-  <!-- CORE SERVICES -->
-  SECTION (id: services, class: services)
-    DIV container
-      DIV section-header
-        P eyebrow: "What We Offer"
-        H2: "Core Services"
-        P section-subtitle: "What you can do here"
-      
-      DIV services-grid
-        <!-- 6 SERVICE CARDS (DP, AI, DL, LA, MW, TS) -->
-        FOR EACH service in [Document Prep, AI Translation, Digital Literacy, Legal Aid, Mental Wellness, Tech Support]
-          DIV service-card
-            DIV service-icon with service abbreviation
-            H3: service name
-            P: service description
-  
-  <!-- FINANCIAL SERVICES BILINGUAL -->
-  SECTION (id: financial, class: financial-services)
-    DIV container
-      DIV section-header
-        P eyebrow: "Bilingual Financial Solutions"
-        H2: "FINANCIAL PLANNING"
-        P section-subtitle: "Personal & Business"
-      
-      DIV services-bilingual
-        <!-- ENGLISH SERVICES -->
-        DIV english-services
-          H3 with USA flag icon: "OUR SERVICES"
-          UL service-list
-            FOR EACH service in English financial services list
-              LI: service
-        
-        <!-- SPANISH SERVICES -->
-        DIV spanish-services
-          H3 with language icon: "NUESTROS SERVICIOS"
-          UL service-list
-            FOR EACH service in Spanish financial services list
-              LI: service
-  
-  <!-- PLATFORM MODULES -->
-  SECTION (class: modules)
-    DIV container
-      DIV section-header
-        P eyebrow: "How It Works"
-        H2: "Platform Modules"
-        P section-subtitle: "Built as a flexible, ethical stack"
-      
-      DIV modules-grid
-        FOR EACH module in [Guides, Language, Support, Justice, Care]
-          DIV module-card
-            DIV module-header
-              DIV module-tag: module name
-              H3: module title
-            P: module description
-  
-  <!-- ABOUT THIS PLATFORM (Nevada-style clarification) -->
-  SECTION (class: about-platform)
-    DIV container
-      H2: "About This Platform"
-      P: "This platform is intended to provide general guidance, resources, and AI-assisted support..."
-      P: "We are a community-focused guide, not a government agency, law firm, or financial institution..."
-      P: "For specific legal or financial matters, you will be connected to local, trusted partners..."
-  
-  <!-- CONTACT SECTION -->
-  SECTION (id: contact, class: contact-top)
-    DIV container
-      DIV contact-invite
-        H2: "Join Our Community"
-        P: "We're looking for community partners, volunteers, and feedback..."
-        
-        DIV contact-methods-inline
-          DIV contact-item-inline
-            I envelope icon
-            H4: "Email Us"
-            A mailto:hello@citymultiservices.org: "hello@citymultiservices.org"
-            SMALL: "General inquiries & partnerships"
-          
-          DIV contact-item-inline
-            I mobile icon
-            H4: "Call or Text"
-            A tel:7029273985: "(702) 927-3985"
-            SPAN phone-badge: "Mobile"
-            SMALL: "Available for calls & texts"
-          
-          DIV contact-item-inline
-            I globe icon
-            H4: "Our Reach"
-            DIV: "Community-first, available everywhere"
-            SMALL: "Serving all communities"
-  
-  <!-- FOOTER -->
-  FOOTER (class: footer)
-    DIV container
-      DIV footer-grid
-        DIV footer-brand
-          DIV footer-logo: "CITY OF MULTI SERVICES"
-          P: "Helping communities navigate essential services..."
-          
-          DIV contact-details
-            DIV contact-item
-              I envelope icon
-              A mailto:hello@citymultiservices.org: "hello@citymultiservices.org"
-            DIV contact-item
-              I mobile icon
-              A tel:7029273985: "(702) 927-3985" with "Mobile" badge
-            DIV contact-item
-              I globe icon
-              SPAN: "Community-first, available everywhere"
-          
-          DIV social-links
-            FOR EACH platform in [Twitter, LinkedIn, GitHub, Facebook, Instagram]
-              A href="#": platform icon
-        
-        DIV footer-links
-          H4: "Quick Links"
-          UL
-            FOR EACH link in [Our Services, Financial Planning, Platform Modules, Contact Us]
-              LI: A href="#": link
-        
-        DIV footer-links
-          H4: "Resources"
-          UL
-            FOR EACH resource in [Legal Disclaimer, Privacy Policy, Terms of Service, Accessibility]
-              LI: A href="#": resource
-        
-        DIV footer-links
-          H4: "Languages"
-          UL
-            FOR EACH language in [English, Español, 中文, Français]
-              LI: A href="#": language
-      
-      DIV footer-bottom
-        P: "© 2023 City of Multi Services. All rights reserved..."
-        P: "Email: hello@citymultiservices.org | Mobile: (702) 927-3985..."
-        P: "Not an attorney or accredited representative in Nevada..."
-  
-  <!-- JAVASCRIPT -->
-  SCRIPT
-    FUNCTION toggleDisclaimer(language)
-      IF language == 'english'
-        SHOW english disclaimer, HIDE spanish disclaimer
-        SET english button active, REMOVE active from spanish button
-      ELSE
-        SHOW spanish disclaimer, HIDE english disclaimer
-        SET spanish button active, REMOVE active from english button
-    
-    FUNCTION smoothScrollToAnchor()
-      FOR EACH anchor link
-        ADD click event listener
-        PREVENT default behavior
-        GET target element
-        SCROLL to target position - 100px with smooth behavior
-    
-    FUNCTION setupPhoneEmailHandlers()
-      FOR EACH phone link
-        ADD click event listener
-        LOG phone click for analytics
-      
-      FOR EACH email link
-        ADD click event listener
-        LOG email click for analytics
-    
-    FUNCTION setupIntersectionObserver()
-      CREATE observer with threshold 0.1
-      FOR EACH section
-        OBSERVE section for fade-in animation
-    
-    CALL toggleDisclaimer('english') on page load
-    CALL smoothScrollToAnchor()
-    CALL setupPhoneEmailHandlers()
-    CALL setupIntersectionObserver()
-  
-  BODY END
-HTML DOCUMENT END
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City of Multi Services | Community-First Assistance Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo-container">
+        <div class="logo-mark">CITY OF MULTI SERVICES</div>
+        <div class="logo-text">City of <span>Multi Services</span></div>
+      </div>
+      <nav class="nav-links">
+        <a href="#before-you-start">Before You Start</a>
+        <a href="#mission-who-we-are">Our Mission</a>
+        <a href="#services">Our Services</a>
+        <a href="#financial">Financial Planning</a>
+        <a href="#contact">Contact</a>
+        <a class="button ghost small" href="#contact"><i class="fa-solid fa-paper-plane"></i><span>Get Started</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy fade-section">
+          <div class="hero-logo">CITY OF MULTI SERVICES</div>
+          <p class="eyebrow">Community-first AI Platform</p>
+          <h1>City of Multi Services</h1>
+          <p class="lede">
+            An AI-assisted platform to help underrepresented and multilingual communities navigate essential services with clarity and confidence.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="#services"><i class="fa-solid fa-rocket"></i><span>Explore Services</span></a>
+            <a class="button secondary" href="#contact"><i class="fa-solid fa-comments"></i><span>Get In Touch</span></a>
+          </div>
+          <div class="chip-row">
+            <span class="chip"><i class="fa-solid fa-language"></i> Multilingual Guidance</span>
+            <span class="chip"><i class="fa-solid fa-shield-heart"></i> Ethical AI</span>
+            <span class="chip"><i class="fa-solid fa-users"></i> Community-First</span>
+            <span class="chip"><i class="fa-solid fa-lock"></i> Privacy-Focused</span>
+          </div>
+        </div>
+        <div class="hero-card fade-section">
+          <div class="tag">Our Mission</div>
+          <h3>Close the gap between people and complex systems.</h3>
+          <p>
+            We combine clear design, trusted resources, and responsible AI so anyone can access legal, educational, and digital help without feeling lost.
+          </p>
+          <ul class="mini-list">
+            <li><i class="fa-regular fa-comment-dots"></i> Plain-language guidance</li>
+            <li><i class="fa-solid fa-language"></i> English, Spanish, and 8+ languages</li>
+            <li><i class="fa-solid fa-shield-halved"></i> Privacy-respecting support</li>
+            <li><i class="fa-regular fa-clock"></i> 24/7 AI assistance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="before-you-start" class="disclaimer-section fade-section">
+      <div class="container">
+        <h2>Before You Start</h2>
+        <p class="body">
+          This platform is brought to you by City of Multi Services to help you navigate essential services with clarity. Please read the legal notice below before proceeding.
+        </p>
+        <div class="legal-notice">
+          <div class="legal-header">
+            <div class="legal-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div>
+              <h3>Important Legal Notice / Aviso Legal Importante</h3>
+              <p class="body">Choose your language to read the disclaimer.</p>
+            </div>
+          </div>
+          <div class="language-toggle">
+            <button class="pill-button active" data-lang="english">English</button>
+            <button class="pill-button" data-lang="spanish">Español</button>
+          </div>
+          <div class="disclaimer-cards">
+            <div class="disclaimer-card english active">
+              <p><strong>English:</strong> I am not an attorney or accredited representative in the State of Nevada, and I cannot give you legal advice.</p>
+            </div>
+            <div class="disclaimer-card spanish">
+              <p><strong>Español:</strong> No soy un abogado ni representante acreditado en el Estado de Nevada, y no puedo brindarle asesoría legal.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="offers">
+          <h3>What This Platform Offers</h3>
+          <ul>
+            <li>AI-powered guidance for forms and applications.</li>
+            <li>Multilingual translation and explanations.</li>
+            <li>Connections to trusted community resources and partners.</li>
+            <li>Educational guides on digital literacy and processes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission-who-we-are" class="mission-section fade-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Our Story</p>
+          <h2>Our Mission &amp; Who We Are</h2>
+          <p class="section-subtitle">Building bridges between communities and essential services</p>
+        </div>
+
+        <div class="mission-grid">
+          <div class="mission-card">
+            <div class="mission-icon"><i class="fa-solid fa-landmark"></i></div>
+            <h3>Our History &amp; Background</h3>
+            <div class="placeholder-info">
+              <p>City of Tax and Multiservices was created in 2014 by working women, honest and professional people who understand the needs of immigrant families to obtain the best advice on tax matters, immigration, Notary Public services, document translation services, help in home buying processes, financial planning or how to start a business.</p>
+              <p>The members of City of Tax and Multiservices have more than 15 years of experience in these areas. They are enthusiastic people, delighted to serve the community, informing and preparing families so they are not abused for not knowing the language, for not having information about the procedure they are going to carry out, trying to educate families so they know their rights and fulfill their tax, legal obligations, etc.</p>
+              <p>We are pleased to help without discriminating against race, religion, sex or color with our experience and knowledge in these areas, contributing to improving Hispanic communities.</p>
+            </div>
+          </div>
+
+          <div class="mission-card">
+            <div class="mission-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Our Mission</h3>
+            <div class="placeholder-info">
+              <p>City of Tax and Multiservices is pleased to advise, instruct and explain in your language in Immigration, Legal, Tax, Translation services, or in any procedure that you do not have knowledge of. We guide you step by step, taking you by the hand until you obtain the expected response.</p>
+            </div>
+          </div>
+
+          <div class="mission-card">
+            <div class="mission-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>Our Vision</h3>
+            <div class="placeholder-info">
+              <p>We are focused so that residents have access to information in a transparent, private, honest and comprehensive way, preventing them from being victims of fraud for not speaking the language, for not understanding the process, for not having knowledge of the laws applicable to their cases, helping to expand their options to invest in their future and maximize their resources.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-matters fade-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Our Impact</p>
+          <h2>Why This Matters</h2>
+          <p class="section-subtitle">Reducing barriers to essential services</p>
+        </div>
+
+        <p class="matters-lead">
+          City of Multi Services brings document prep, translation, digital literacy, and resource navigation together in one easy place. Everything is guided by ethical AI and community feedback.
+        </p>
+
+        <div class="matters-stats">
+          <div class="stat">
+            <div class="stat-number">1,250+</div>
+            <div class="stat-label">Users Helped</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Languages Supported</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">AI Assistance</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Ethical AI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services fade-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">What We Offer</p>
+          <h2>Core Services</h2>
+          <p class="section-subtitle">What you can do here</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">DP</div>
+            <h3>Document Prep</h3>
+            <p>Immigration packets, taxes, resumes, and applications with step-by-step checklists.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">AI</div>
+            <h3>AI Translation</h3>
+            <p>English, Spanish, and other languages with context-aware explanations.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">DL</div>
+            <h3>Digital Literacy</h3>
+            <p>Workshops and one-on-one tech help so users can navigate online systems safely.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">LA</div>
+            <h3>Legal Aid</h3>
+            <p>Connections to trusted legal resources, clinics, and community partners.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">MW</div>
+            <h3>Mental Wellness</h3>
+            <p>Guided pathways to hotlines, support groups, and vetted local services.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">TS</div>
+            <h3>Tech Support</h3>
+            <p>Quick help for devices, accounts, and access so users stay connected.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="financial" class="financial-services fade-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Bilingual Financial Solutions</p>
+          <h2>FINANCIAL PLANNING</h2>
+          <p class="section-subtitle">Personal &amp; Business</p>
+        </div>
+
+        <div class="services-bilingual">
+          <div class="financial-column">
+            <h3><i class="fa-solid fa-flag-usa"></i> Our Services</h3>
+            <ul class="service-list">
+              <li>Personal tax planning and filing support.</li>
+              <li>Small business bookkeeping setup.</li>
+              <li>Entity selection guidance for new businesses.</li>
+              <li>Budgeting and savings plans for families.</li>
+              <li>Credit education and score building support.</li>
+              <li>Home purchase preparation and documentation.</li>
+              <li>Retirement and insurance basics.</li>
+              <li>Expense tracking templates and coaching.</li>
+            </ul>
+          </div>
+          <div class="financial-column">
+            <h3><i class="fa-solid fa-language"></i> Nuestros Servicios</h3>
+            <ul class="service-list">
+              <li>Planificación y apoyo para la declaración de impuestos personales.</li>
+              <li>Configuración de contabilidad para pequeños negocios.</li>
+              <li>Orientación sobre selección de entidad para nuevos negocios.</li>
+              <li>Planes de presupuesto y ahorro para familias.</li>
+              <li>Educación de crédito y apoyo para mejorar su puntaje.</li>
+              <li>Preparación para compra de casa y documentación.</li>
+              <li>Conceptos básicos de jubilación y seguros.</li>
+              <li>Plantillas y acompañamiento para seguimiento de gastos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modules" class="modules fade-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">How It Works</p>
+          <h2>Platform Modules</h2>
+          <p class="section-subtitle">Built as a flexible, ethical stack</p>
+        </div>
+
+        <div class="modules-grid">
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-tag">Guides</div>
+              <h3>Document Prep</h3>
+            </div>
+            <p>Structured flows with guardrails to avoid missing forms or deadlines.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-tag">Language</div>
+              <h3>Translation &amp; Interpretation</h3>
+            </div>
+            <p>In-line translations plus context notes so meaning stays accurate.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-tag">Support</div>
+              <h3>Digital Literacy</h3>
+            </div>
+            <p>Short lessons and guided practice tailored to your comfort level.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-tag">Justice</div>
+              <h3>Legal Aid &amp; Resources</h3>
+            </div>
+            <p>Routing to reputable partners with transparent disclaimers and consent.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-header">
+              <div class="module-tag">Care</div>
+              <h3>Mental Wellness Navigator</h3>
+            </div>
+            <p>Resource matching that respects privacy and urgency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-platform" class="about-platform fade-section">
+      <div class="container">
+        <h2>About This Platform</h2>
+        <p>This platform is intended to provide general guidance, resources, and AI-assisted support to help you understand processes and connect with trusted community partners.</p>
+        <p>We are a community-focused guide, not a government agency, law firm, or financial institution. For specific legal or financial matters, you will be connected to local, trusted partners who can assist you directly.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-top fade-section">
+      <div class="container contact-invite">
+        <div>
+          <h2>Join Our Community</h2>
+          <p>We're looking for community partners, volunteers, and feedback to make sure our platform serves everyone effectively.</p>
+        </div>
+        <div class="contact-methods-inline">
+          <div class="contact-item-inline">
+            <i class="fa-regular fa-envelope"></i>
+            <h4>Email Us</h4>
+            <a href="mailto:hello@citymultiservices.org">hello@citymultiservices.org</a>
+            <small>General inquiries &amp; partnerships</small>
+          </div>
+          <div class="contact-item-inline">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h4>Call or Text</h4>
+            <a href="tel:7029273985">(702) 927-3985</a>
+            <span class="phone-badge">Mobile</span>
+            <small>Available for calls &amp; texts</small>
+          </div>
+          <div class="contact-item-inline">
+            <i class="fa-solid fa-globe"></i>
+            <h4>Our Reach</h4>
+            <div>Community-first, available everywhere</div>
+            <small>Serving all communities</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">CITY OF MULTI SERVICES</div>
+        <p>Helping communities navigate essential services with clarity, privacy, and multilingual care.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:hello@citymultiservices.org">hello@citymultiservices.org</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <a href="tel:7029273985">(702) 927-3985</a>
+            <span class="phone-badge">Mobile</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>Community-first, available everywhere</span>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#financial">Financial Planning</a></li>
+          <li><a href="#modules">Platform Modules</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#before-you-start">Legal Disclaimer</a></li>
+          <li><a href="#about-platform">Privacy Policy</a></li>
+          <li><a href="#about-platform">Terms of Service</a></li>
+          <li><a href="#about-platform">Accessibility</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Languages</h4>
+        <ul>
+          <li><a href="#">English</a></li>
+          <li><a href="#">Español</a></li>
+          <li><a href="#">中文</a></li>
+          <li><a href="#">Français</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="current-year"></span> City of Multi Services. All rights reserved.</p>
+      <p>Email: hello@citymultiservices.org | Mobile: (702) 927-3985</p>
+      <p>Not an attorney or accredited representative in Nevada. This site provides general guidance and connections to trusted partners.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleDisclaimer = (language) => {
+      const englishCard = document.querySelector(".disclaimer-card.english");
+      const spanishCard = document.querySelector(".disclaimer-card.spanish");
+      const englishBtn = document.querySelector('.pill-button[data-lang="english"]');
+      const spanishBtn = document.querySelector('.pill-button[data-lang="spanish"]');
+
+      if (!englishCard || !spanishCard || !englishBtn || !spanishBtn) return;
+
+      if (language === "english") {
+        englishCard.classList.add("active");
+        spanishCard.classList.remove("active");
+        englishBtn.classList.add("active");
+        spanishBtn.classList.remove("active");
+        englishBtn.setAttribute("aria-pressed", "true");
+        spanishBtn.setAttribute("aria-pressed", "false");
+      } else {
+        englishCard.classList.remove("active");
+        spanishCard.classList.add("active");
+        englishBtn.classList.remove("active");
+        spanishBtn.classList.add("active");
+        englishBtn.setAttribute("aria-pressed", "false");
+        spanishBtn.setAttribute("aria-pressed", "true");
+      }
+    };
+
+    const smoothScrollToAnchor = () => {
+      const links = document.querySelectorAll('a[href^="#"]');
+      const offset = 90;
+
+      links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const targetId = link.getAttribute("href");
+          if (!targetId || targetId === "#") return;
+
+          const targetEl = document.querySelector(targetId);
+          if (!targetEl) return;
+
+          event.preventDefault();
+          const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        });
+      });
+    };
+
+    const setupPhoneEmailHandlers = () => {
+      document.querySelectorAll('a[href^="tel"]').forEach((link) => {
+        link.addEventListener("click", () => {
+          console.log("Phone link clicked:", link.getAttribute("href"));
+        });
+      });
+
+      document.querySelectorAll('a[href^="mailto"]').forEach((link) => {
+        link.addEventListener("click", () => {
+          console.log("Email link clicked:", link.getAttribute("href"));
+        });
+      });
+    };
+
+    const setupIntersectionObserver = () => {
+      const sections = document.querySelectorAll(".fade-section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      toggleDisclaimer("english");
+      smoothScrollToAnchor();
+      setupPhoneEmailHandlers();
+      setupIntersectionObserver();
+      document.querySelectorAll(".pill-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          toggleDisclaimer(button.dataset.lang);
+        });
+      });
+
+      const yearEl = document.getElementById("current-year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
