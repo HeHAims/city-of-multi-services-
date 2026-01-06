@@ -758,6 +758,43 @@ h1 {
   transform: translateY(0);
 }
 
+.agents-section {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.agent-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.agent-card img {
+  width: 100%;
+  display: block;
+}
+
+.agent-info {
+  padding: 14px;
+}
+
+.agent-info h4 {
+  margin: 0 0 6px;
+}
+
+.agent-info p {
+  margin: 0;
+  color: var(--muted);
+}
+
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
