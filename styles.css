@@ -169,6 +169,18 @@ img {
     linear-gradient(135deg, #0f172a, #0c1230);
   color: #f7f9fd;
   padding: 96px 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("logo.png") no-repeat right -40px center;
+  background-size: min(520px, 60vw) auto;
+  opacity: 0.12;
+  pointer-events: none;
 }
 
 .hero-grid {
@@ -176,6 +188,8 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-logo {
