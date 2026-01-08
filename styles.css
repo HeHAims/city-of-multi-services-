@@ -537,6 +537,18 @@ h1 {
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
 }
 
+.form-icon {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.form-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .financial-services {
   padding: 80px 0;
   background: linear-gradient(180deg, #f8fbff, #f7f7fb);
