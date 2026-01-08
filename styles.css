@@ -173,11 +173,11 @@ img {
   overflow: hidden;
 }
 
-.hero::before {
+.hero.hero-home::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("logo.png") no-repeat right -40px center;
+  background: url("logo.png") no-repeat 8% center;
   background-size: min(520px, 60vw) auto;
   opacity: 0.12;
   pointer-events: none;
